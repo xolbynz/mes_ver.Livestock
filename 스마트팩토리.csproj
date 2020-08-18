@@ -1,0 +1,1681 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{43CE4E0D-40E1-4186-B387-E19604878CC9}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>스마트팩토리</RootNamespace>
+    <AssemblyName>스마트팩토리</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>게시\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>main_logo_32.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>packages\MetroFramework.RunTime.1.2.0.3\lib\net40-Client\MetroFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>packages\MetroFramework.Design.1.2.0.3\lib\net40\MetroFramework.Design.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>packages\MetroFramework.Fonts.1.2.0.3\lib\net40\MetroFramework.Fonts.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="MonthCalendar">
+      <HintPath>.\MonthCalendar.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="YearMonthLib">
+      <HintPath>.\YearMonthLib.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CLS\ComInfo.cs" />
+    <Compile Include="CLS\Frompt.cs" />
+    <Compile Include="CLS\sep.cs" />
+    <Compile Include="CLS\SettingXML.cs" />
+    <Compile Include="CLS\wnAdo.cs" />
+    <Compile Include="CLS\wnDm.cs" />
+    <Compile Include="CLS\wnDm3.cs" />
+    <Compile Include="CLS\wnDmProc.cs" />
+    <Compile Include="CLS\wnGConstant.cs" />
+    <Compile Include="CLS\wnLog.cs" />
+    <Compile Include="CLS\wnProcCon.cs" />
+    <Compile Include="Common.cs" />
+    <Compile Include="Controller\ProcCtrl.cs" />
+    <Compile Include="Controller\QueryCtrl.cs" />
+    <Compile Include="Controls\conBorderStyle.cs" />
+    <Compile Include="Controls\conCheckBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\conComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\conDataGridView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\conDataGridView.Designer.cs">
+      <DependentUpon>conDataGridView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\conDateTimePicker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\conDefaults.cs" />
+    <Compile Include="Controls\conFontSize.cs" />
+    <Compile Include="Controls\conFontWeight.cs" />
+    <Compile Include="Controls\conLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\conMaskedTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\conTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\conTextNumber.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\DataGridViewCellExHelper.cs" />
+    <Compile Include="Controls\DataGridViewHelper.cs" />
+    <Compile Include="Controls\DataGridViewTextBoxCellEx.cs" />
+    <Compile Include="Controls\ISpannedCell.cs" />
+    <Compile Include="dsRepot01.cs">
+      <DependentUpon>dsRepot01.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsRepot01.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsRepot01.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="frmBack.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBack.Designer.cs">
+      <DependentUpon>frmBack.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBackRoot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBackRoot.designer.cs">
+      <DependentUpon>frmBackRoot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCheck.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCheck.Designer.cs">
+      <DependentUpon>frmCheck.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IfrmInterface.cs" />
+    <Compile Include="IfrmInterfaceList.cs" />
+    <Compile Include="Model\Procedure\ProcLogic.cs" />
+    <Compile Include="Model\Query\chaQuery.cs" />
+    <Compile Include="Model\Query\QueryDelete.cs" />
+    <Compile Include="Model\Query\QueryInsert.cs" />
+    <Compile Include="Model\Query\QuerySelect.cs" />
+    <Compile Include="Model\Query\QueryUpdate.cs" />
+    <Compile Include="Model\Query\scQuery.cs" />
+    <Compile Include="P10_ORD\frm반품관리부확인.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P10_ORD\frm반품관리부확인.Designer.cs">
+      <DependentUpon>frm반품관리부확인.cs</DependentUpon>
+    </Compile>
+    <Compile Include="P10_ORD\frm반품조회.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P10_ORD\frm반품조회.Designer.cs">
+      <DependentUpon>frm반품조회.cs</DependentUpon>
+    </Compile>
+    <Compile Include="P10_PLN\frm생산계획등록.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P10_PLN\frm생산계획등록.Designer.cs">
+      <DependentUpon>frm생산계획등록.cs</DependentUpon>
+    </Compile>
+    <Compile Include="P10_ORD\frm수금.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P10_ORD\frm수금.Designer.cs">
+      <DependentUpon>frm수금.cs</DependentUpon>
+    </Compile>
+    <Compile Include="P10_ORD\frm주문서.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P10_ORD\frm주문서.Designer.cs">
+      <DependentUpon>frm주문서.cs</DependentUpon>
+    </Compile>
+    <Compile Include="P10_ORD\frm미송등록.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P10_ORD\frm미송등록.Designer.cs">
+      <DependentUpon>frm미송등록.cs</DependentUpon>
+    </Compile>
+    <Compile Include="P10_ORD\frm반품서.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P10_ORD\frm반품서.Designer.cs">
+      <DependentUpon>frm반품서.cs</DependentUpon>
+    </Compile>
+    <Compile Include="P10_ORD\frm할인마감.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P10_ORD\frm할인마감.designer.cs">
+      <DependentUpon>frm할인마감.cs</DependentUpon>
+    </Compile>
+    <Compile Include="P10_PLN\frm소요산출량.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P10_PLN\frm소요산출량.Designer.cs">
+      <DependentUpon>frm소요산출량.cs</DependentUpon>
+    </Compile>
+    <Compile Include="P20_ORD\frm구매처원장.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P20_ORD\frm구매처원장.Designer.cs">
+      <DependentUpon>frm구매처원장.cs</DependentUpon>
+    </Compile>
+    <Compile Include="P20_ORD\frm발주서등록.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P20_ORD\frm발주서등록.Designer.cs">
+      <DependentUpon>frm발주서등록.cs</DependentUpon>
+    </Compile>
+    <Compile Include="P20_ORD\frm외주가공원장.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P20_ORD\frm외주가공원장.Designer.cs">
+      <DependentUpon>frm외주가공원장.cs</DependentUpon>
+    </Compile>
+    <Compile Include="P20_ORD\frm원자재반품등록.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P20_ORD\frm원자재반품등록.Designer.cs">
+      <DependentUpon>frm원자재반품등록.cs</DependentUpon>
+    </Compile>
+    <Compile Include="P20_ORD\frm원자재원장현황.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P20_ORD\frm원자재원장현황.Designer.cs">
+      <DependentUpon>frm원자재원장현황.cs</DependentUpon>
+    </Compile>
+    <Compile Include="P20_ORD\frm원자재입고등록.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P20_ORD\frm원자재입고등록.Designer.cs">
+      <DependentUpon>frm원자재입고등록.cs</DependentUpon>
+    </Compile>
+    <Compile Include="P20_ORD\frm원자재입고식별표.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P20_ORD\frm원자재입고식별표.Designer.cs">
+      <DependentUpon>frm원자재입고식별표.cs</DependentUpon>
+    </Compile>
+    <Compile Include="P20_ORD\frm원자재재고현황.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P20_ORD\frm원자재재고현황.Designer.cs">
+      <DependentUpon>frm원자재재고현황.cs</DependentUpon>
+    </Compile>
+    <Compile Include="P20_ORD\frm지육입고및공정.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P20_ORD\frm지육입고및공정.Designer.cs">
+      <DependentUpon>frm지육입고및공정.cs</DependentUpon>
+    </Compile>
+    <Compile Include="P30_SCH\frm공정알람내역.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P30_SCH\frm공정알람내역.Designer.cs">
+      <DependentUpon>frm공정알람내역.cs</DependentUpon>
+    </Compile>
+    <Compile Include="P30_SCH\frm공정이동표바코드.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P30_SCH\frm공정이동표바코드.Designer.cs">
+      <DependentUpon>frm공정이동표바코드.cs</DependentUpon>
+    </Compile>
+    <Compile Include="P30_SCH\frm생산모니터링.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P30_SCH\frm생산모니터링.Designer.cs">
+      <DependentUpon>frm생산모니터링.cs</DependentUpon>
+    </Compile>
+    <Compile Include="P30_SCH\frm생산현황.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P30_SCH\frm생산현황.Designer.cs">
+      <DependentUpon>frm생산현황.cs</DependentUpon>
+    </Compile>
+    <Compile Include="P30_SCH\frm일일작업결과.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P30_SCH\frm일일작업결과.designer.cs">
+      <DependentUpon>frm일일작업결과.cs</DependentUpon>
+    </Compile>
+    <Compile Include="P30_SCH\frm씨지엠작업지시서등록.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P30_SCH\frm씨지엠작업지시서등록.designer.cs">
+      <DependentUpon>frm씨지엠작업지시서등록.cs</DependentUpon>
+    </Compile>
+    <Compile Include="P30_SCH\frm원자재투입바코드.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P30_SCH\frm원자재투입바코드.Designer.cs">
+      <DependentUpon>frm원자재투입바코드.cs</DependentUpon>
+    </Compile>
+    <Compile Include="P20_ORD\frm원자재투입현황.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P20_ORD\frm원자재투입현황.Designer.cs">
+      <DependentUpon>frm원자재투입현황.cs</DependentUpon>
+    </Compile>
+    <Compile Include="P30_SCH\frm공정별생산현황.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P30_SCH\frm공정별생산현황.Designer.cs">
+      <DependentUpon>frm공정별생산현황.cs</DependentUpon>
+    </Compile>
+    <Compile Include="P30_SCH\frm공정별재공현황.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P30_SCH\frm공정별재공현황.Designer.cs">
+      <DependentUpon>frm공정별재공현황.cs</DependentUpon>
+    </Compile>
+    <Compile Include="P30_SCH\frm실적정보.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P30_SCH\frm실적정보.Designer.cs">
+      <DependentUpon>frm실적정보.cs</DependentUpon>
+    </Compile>
+    <Compile Include="P30_SCH\frm완제품자재입고확정.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P30_SCH\frm완제품자재입고확정.Designer.cs">
+      <DependentUpon>frm완제품자재입고확정.cs</DependentUpon>
+    </Compile>
+    <Compile Include="P30_SCH\frm작업공정등록.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P30_SCH\frm작업공정등록.Designer.cs">
+      <DependentUpon>frm작업공정등록.cs</DependentUpon>
+    </Compile>
+    <Compile Include="P30_SCH\frm작업일보관리.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P30_SCH\frm작업일보관리.Designer.cs">
+      <DependentUpon>frm작업일보관리.cs</DependentUpon>
+    </Compile>
+    <Compile Include="P30_SCH\frm작업지시서_모니터링.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P30_SCH\frm작업지시서_모니터링.designer.cs">
+      <DependentUpon>frm작업지시서_모니터링.cs</DependentUpon>
+    </Compile>
+    <Compile Include="P30_SCH\frm작업지시서등록.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P30_SCH\frm작업지시서등록.Designer.cs">
+      <DependentUpon>frm작업지시서등록.cs</DependentUpon>
+    </Compile>
+    <Compile Include="P30_SCH\frm작업지시서현황.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P30_SCH\frm작업지시서현황.designer.cs">
+      <DependentUpon>frm작업지시서현황.cs</DependentUpon>
+    </Compile>
+    <Compile Include="P30_SCH\frm제품입고식별표.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P30_SCH\frm제품입고식별표.Designer.cs">
+      <DependentUpon>frm제품입고식별표.cs</DependentUpon>
+    </Compile>
+    <Compile Include="P30_SCH\uc원장조회.cs">
+      <SubType>UserControl</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="P30_SCH\uc원장조회.Designer.cs">
+      <DependentUpon>uc원장조회.cs</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="P40_ITM\frmLOTNO추적조회.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P40_ITM\frmLOTNO추적조회.Designer.cs">
+      <DependentUpon>frmLOTNO추적조회.cs</DependentUpon>
+    </Compile>
+    <Compile Include="P40_ITM\frm거래처재고현황.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P40_ITM\frm거래처재고현황.Designer.cs">
+      <DependentUpon>frm거래처재고현황.cs</DependentUpon>
+    </Compile>
+    <Compile Include="P40_ITM\frm씨지엠작업일보.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P40_ITM\frm씨지엠작업일보.designer.cs">
+      <DependentUpon>frm씨지엠작업일보.cs</DependentUpon>
+    </Compile>
+    <Compile Include="P40_ITM\frm씨지엠출고지시.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P40_ITM\frm씨지엠출고지시.designer.cs">
+      <DependentUpon>frm씨지엠출고지시.cs</DependentUpon>
+    </Compile>
+    <Compile Include="P40_ITM\frm씨지엠출고지시현황.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P40_ITM\frm씨지엠출고지시현황.designer.cs">
+      <DependentUpon>frm씨지엠출고지시현황.cs</DependentUpon>
+    </Compile>
+    <Compile Include="P40_ITM\frm제품원장현황.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P40_ITM\frm제품원장현황.designer.cs">
+      <DependentUpon>frm제품원장현황.cs</DependentUpon>
+    </Compile>
+    <Compile Include="P40_ITM\frm제품입고확정.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P40_ITM\frm제품입고확정.designer.cs">
+      <DependentUpon>frm제품입고확정.cs</DependentUpon>
+    </Compile>
+    <Compile Include="P40_ITM\frm제품재고현황.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P40_ITM\frm제품재고현황.Designer.cs">
+      <DependentUpon>frm제품재고현황.cs</DependentUpon>
+    </Compile>
+    <Compile Include="P40_ITM\frm제품출고등록.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P40_ITM\frm제품출고등록.Designer.cs">
+      <DependentUpon>frm제품출고등록.cs</DependentUpon>
+    </Compile>
+    <Compile Include="P40_ITM\frm제품출고원장.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P40_ITM\frm제품출고원장.Designer.cs">
+      <DependentUpon>frm제품출고원장.cs</DependentUpon>
+    </Compile>
+    <Compile Include="P40_ITM\frm제품출고이력현황.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P40_ITM\frm제품출고이력현황.Designer.cs">
+      <DependentUpon>frm제품출고이력현황.cs</DependentUpon>
+    </Compile>
+    <Compile Include="P40_ITM\frm제품출고현황.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P40_ITM\frm제품출고현황.Designer.cs">
+      <DependentUpon>frm제품출고현황.cs</DependentUpon>
+    </Compile>
+    <Compile Include="P40_ITM\frm제품출하바코드.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P40_ITM\frm제품출하바코드.Designer.cs">
+      <DependentUpon>frm제품출하바코드.cs</DependentUpon>
+    </Compile>
+    <Compile Include="P40_ITM\frm제품현황.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P40_ITM\frm제품현황.designer.cs">
+      <DependentUpon>frm제품현황.cs</DependentUpon>
+    </Compile>
+    <Compile Include="P50_QUA\frmHACCP등록.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P50_QUA\frmHACCP등록.designer.cs">
+      <DependentUpon>frmHACCP등록.cs</DependentUpon>
+    </Compile>
+    <Compile Include="P50_QUA\frm검사성적서등록.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P50_QUA\frm검사성적서등록.Designer.cs">
+      <DependentUpon>frm검사성적서등록.cs</DependentUpon>
+    </Compile>
+    <Compile Include="P50_QUA\frm공정검사기준등록.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P50_QUA\frm공정검사기준등록.Designer.cs">
+      <DependentUpon>frm공정검사기준등록.cs</DependentUpon>
+    </Compile>
+    <Compile Include="P50_QUA\frm공정검사통계표.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P50_QUA\frm공정검사통계표.Designer.cs">
+      <DependentUpon>frm공정검사통계표.cs</DependentUpon>
+    </Compile>
+    <Compile Include="P50_QUA\frm생산보고서조회.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P50_QUA\frm생산보고서조회.Designer.cs">
+      <DependentUpon>frm생산보고서조회.cs</DependentUpon>
+    </Compile>
+    <Compile Include="P50_QUA\frm씨지엠공정추적.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P50_QUA\frm씨지엠공정추적.designer.cs">
+      <DependentUpon>frm씨지엠공정추적.cs</DependentUpon>
+    </Compile>
+    <Compile Include="P50_QUA\frm씨지엠납품추적.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P50_QUA\frm씨지엠납품추적.designer.cs">
+      <DependentUpon>frm씨지엠납품추적.cs</DependentUpon>
+    </Compile>
+    <Compile Include="P50_QUA\frm원자재수입검사기준.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P50_QUA\frm원자재수입검사기준.Designer.cs">
+      <DependentUpon>frm원자재수입검사기준.cs</DependentUpon>
+    </Compile>
+    <Compile Include="P50_QUA\frm제품검사성적서등록.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P50_QUA\frm제품검사성적서등록.Designer.cs">
+      <DependentUpon>frm제품검사성적서등록.cs</DependentUpon>
+    </Compile>
+    <Compile Include="P50_QUA\frm제품불량내역.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P50_QUA\frm제품불량내역.Designer.cs">
+      <DependentUpon>frm제품불량내역.cs</DependentUpon>
+    </Compile>
+    <Compile Include="P50_QUA\frm품질추적현황.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P50_QUA\frm품질추적현황.Designer.cs">
+      <DependentUpon>frm품질추적현황.cs</DependentUpon>
+    </Compile>
+    <Compile Include="P60_FAC\frm금형설정등록.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P60_FAC\frm금형설정등록.Designer.cs">
+      <DependentUpon>frm금형설정등록.cs</DependentUpon>
+    </Compile>
+    <Compile Include="P50_QUA\frm원자재수입검사.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P50_QUA\frm원자재수입검사.Designer.cs">
+      <DependentUpon>frm원자재수입검사.cs</DependentUpon>
+    </Compile>
+    <Compile Include="P60_FAC\frm금형수명관리대장.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P60_FAC\frm금형수명관리대장.Designer.cs">
+      <DependentUpon>frm금형수명관리대장.cs</DependentUpon>
+    </Compile>
+    <Compile Include="P60_FAC\frm금형카드등록.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P60_FAC\frm금형카드등록.Designer.cs">
+      <DependentUpon>frm금형카드등록.cs</DependentUpon>
+    </Compile>
+    <Compile Include="P60_FAC\frm설비이력관리대장.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P60_FAC\frm설비이력관리대장.Designer.cs">
+      <DependentUpon>frm설비이력관리대장.cs</DependentUpon>
+    </Compile>
+    <Compile Include="P60_FAC\frm설비점검등록.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P60_FAC\frm설비점검등록.Designer.cs">
+      <DependentUpon>frm설비점검등록.cs</DependentUpon>
+    </Compile>
+    <Compile Include="P60_FAC\frm설비카드등록.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P60_FAC\frm설비카드등록.Designer.cs">
+      <DependentUpon>frm설비카드등록.cs</DependentUpon>
+    </Compile>
+    <Compile Include="P70_MGM\frm수금결재처리.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P70_MGM\frm수금결재처리.Designer.cs">
+      <DependentUpon>frm수금결재처리.cs</DependentUpon>
+    </Compile>
+    <Compile Include="P70_MGM\frm영업소수금.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P70_MGM\frm영업소수금.Designer.cs">
+      <DependentUpon>frm영업소수금.cs</DependentUpon>
+    </Compile>
+    <Compile Include="P70_MGM\frm영업소주문서.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P70_MGM\frm영업소주문서.designer.cs">
+      <DependentUpon>frm영업소주문서.cs</DependentUpon>
+    </Compile>
+    <Compile Include="P70_MGM\frm판매결재처리.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P70_MGM\frm판매결재처리.designer.cs">
+      <DependentUpon>frm판매결재처리.cs</DependentUpon>
+    </Compile>
+    <Compile Include="P70_MGM\frm판매수금현금목표등록.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P70_MGM\frm판매수금현금목표등록.designer.cs">
+      <DependentUpon>frm판매수금현금목표등록.cs</DependentUpon>
+    </Compile>
+    <Compile Include="P70_STA\frmLOTNO별불랑분석.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P70_STA\frmLOTNO별불랑분석.Designer.cs">
+      <DependentUpon>frmLOTNO별불랑분석.cs</DependentUpon>
+    </Compile>
+    <Compile Include="P70_STA\frm공정품질달성률.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P70_STA\frm공정품질달성률.Designer.cs">
+      <DependentUpon>frm공정품질달성률.cs</DependentUpon>
+    </Compile>
+    <Compile Include="P70_STA\frm납기준수율분석.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P70_STA\frm납기준수율분석.Designer.cs">
+      <DependentUpon>frm납기준수율분석.cs</DependentUpon>
+    </Compile>
+    <Compile Include="P70_STA\frm매출목표달성률.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P70_STA\frm매출목표달성률.Designer.cs">
+      <DependentUpon>frm매출목표달성률.cs</DependentUpon>
+    </Compile>
+    <Compile Include="P70_STA\frm생산목표달성률.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P70_STA\frm생산목표달성률.Designer.cs">
+      <DependentUpon>frm생산목표달성률.cs</DependentUpon>
+    </Compile>
+    <Compile Include="P85_BAS\frmHACCP관련파일관리.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P85_BAS\frmHACCP관련파일관리.designer.cs">
+      <DependentUpon>frmHACCP관련파일관리.cs</DependentUpon>
+    </Compile>
+    <Compile Include="P85_BAS\frmHACCP기준등록.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P85_BAS\frmHACCP기준등록.designer.cs">
+      <DependentUpon>frmHACCP기준등록.cs</DependentUpon>
+    </Compile>
+    <Compile Include="P85_BAS\frm거래처등록.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P85_BAS\frm거래처등록.Designer.cs">
+      <DependentUpon>frm거래처등록.cs</DependentUpon>
+    </Compile>
+    <Compile Include="P85_BAS\frm검사항목등록.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P85_BAS\frm검사항목등록.Designer.cs">
+      <DependentUpon>frm검사항목등록.cs</DependentUpon>
+    </Compile>
+    <Compile Include="P85_BAS\frm공정분류.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P85_BAS\frm공정분류.designer.cs">
+      <DependentUpon>frm공정분류.cs</DependentUpon>
+    </Compile>
+    <Compile Include="P85_BAS\frm공정코드등록.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P85_BAS\frm공정코드등록.Designer.cs">
+      <DependentUpon>frm공정코드등록.cs</DependentUpon>
+    </Compile>
+    <Compile Include="P85_BAS\frm기초코드조회.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P85_BAS\frm기초코드조회.designer.cs">
+      <DependentUpon>frm기초코드조회.cs</DependentUpon>
+    </Compile>
+    <Compile Include="P85_BAS\frm사업자관리.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P85_BAS\frm사업자관리.Designer.cs">
+      <DependentUpon>frm사업자관리.cs</DependentUpon>
+    </Compile>
+    <Compile Include="P85_BAS\frm사용자관리.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P85_BAS\frm사용자관리.Designer.cs">
+      <DependentUpon>frm사용자관리.cs</DependentUpon>
+    </Compile>
+    <Compile Include="P85_BAS\frm우편번호.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P85_BAS\frm우편번호.Designer.cs">
+      <DependentUpon>frm우편번호.cs</DependentUpon>
+    </Compile>
+    <Compile Include="P85_BAS\frm원산지등록.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P85_BAS\frm원산지등록.designer.cs">
+      <DependentUpon>frm원산지등록.cs</DependentUpon>
+    </Compile>
+    <Compile Include="P85_BAS\frm원자재기초수량등록.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P85_BAS\frm원자재기초수량등록.Designer.cs">
+      <DependentUpon>frm원자재기초수량등록.cs</DependentUpon>
+    </Compile>
+    <Compile Include="P85_BAS\frm원자재등록.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P85_BAS\frm원자재등록.Designer.cs">
+      <DependentUpon>frm원자재등록.cs</DependentUpon>
+    </Compile>
+    <Compile Include="P85_BAS\frm제품관리구분등록.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P85_BAS\frm제품관리구분등록.Designer.cs">
+      <DependentUpon>frm제품관리구분등록.cs</DependentUpon>
+    </Compile>
+    <Compile Include="P85_BAS\frm담당자등록.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P85_BAS\frm담당자등록.Designer.cs">
+      <DependentUpon>frm담당자등록.cs</DependentUpon>
+    </Compile>
+    <Compile Include="P85_BAS\frm제품기초수량등록.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P85_BAS\frm제품기초수량등록.Designer.cs">
+      <DependentUpon>frm제품기초수량등록.cs</DependentUpon>
+    </Compile>
+    <Compile Include="P85_BAS\frm제품등록.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P85_BAS\frm제품등록.Designer.cs">
+      <DependentUpon>frm제품등록.cs</DependentUpon>
+    </Compile>
+    <Compile Include="P85_BAS\frm제품재고조정관리.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P85_BAS\frm제품재고조정관리.Designer.cs">
+      <DependentUpon>frm제품재고조정관리.cs</DependentUpon>
+    </Compile>
+    <Compile Include="P85_BAS\frm지육산출물등록.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P85_BAS\frm지육산출물등록.Designer.cs">
+      <DependentUpon>frm지육산출물등록.cs</DependentUpon>
+    </Compile>
+    <Compile Include="P85_BAS\frm진료과목등록.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P85_BAS\frm진료과목등록.Designer.cs">
+      <DependentUpon>frm진료과목등록.cs</DependentUpon>
+    </Compile>
+    <Compile Include="P85_BAS\frm거래분류등록.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P85_BAS\frm거래분류등록.Designer.cs">
+      <DependentUpon>frm거래분류등록.cs</DependentUpon>
+    </Compile>
+    <Compile Include="P85_BAS\frm창고등록.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P85_BAS\frm창고등록.Designer.cs">
+      <DependentUpon>frm창고등록.cs</DependentUpon>
+    </Compile>
+    <Compile Include="P85_BAS\frm제품구분등록.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P85_BAS\frm제품구분등록.Designer.cs">
+      <DependentUpon>frm제품구분등록.cs</DependentUpon>
+    </Compile>
+    <Compile Include="P85_BAS\frm제형구분등록.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P85_BAS\frm제형구분등록.Designer.cs">
+      <DependentUpon>frm제형구분등록.cs</DependentUpon>
+    </Compile>
+    <Compile Include="P85_BAS\frm단위등록.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P85_BAS\frm단위등록.Designer.cs">
+      <DependentUpon>frm단위등록.cs</DependentUpon>
+    </Compile>
+    <Compile Include="P85_BAS\frm영업소등록.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P85_BAS\frm영업소등록.Designer.cs">
+      <DependentUpon>frm영업소등록.cs</DependentUpon>
+    </Compile>
+    <Compile Include="P85_BAS\frm처방처약국등록.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P85_BAS\frm처방처약국등록.Designer.cs">
+      <DependentUpon>frm처방처약국등록.cs</DependentUpon>
+    </Compile>
+    <Compile Include="P85_BAS\frm거래처제품할인률등록.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P85_BAS\frm거래처제품할인률등록.Designer.cs">
+      <DependentUpon>frm거래처제품할인률등록.cs</DependentUpon>
+    </Compile>
+    <Compile Include="P85_BAS\frm처방처등록.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P85_BAS\frm처방처등록.Designer.cs">
+      <DependentUpon>frm처방처등록.cs</DependentUpon>
+    </Compile>
+    <Compile Include="P85_BAS\MetroFramework.cs" />
+    <Compile Include="P90_SYS\frm공지사항.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P90_SYS\frm공지사항.Designer.cs">
+      <DependentUpon>frm공지사항.cs</DependentUpon>
+    </Compile>
+    <Compile Include="P90_SYS\frm단가정리.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P90_SYS\frm단가정리.Designer.cs">
+      <DependentUpon>frm단가정리.cs</DependentUpon>
+    </Compile>
+    <Compile Include="P90_SYS\frm분류코드등록.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P90_SYS\frm분류코드등록.Designer.cs">
+      <DependentUpon>frm분류코드등록.cs</DependentUpon>
+    </Compile>
+    <Compile Include="P90_SYS\frm사업자등록.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P90_SYS\frm사업자등록.Designer.cs">
+      <DependentUpon>frm사업자등록.cs</DependentUpon>
+    </Compile>
+    <Compile Include="P90_SYS\frm사용자관리.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P90_SYS\frm사용자관리.Designer.cs">
+      <DependentUpon>frm사용자관리.cs</DependentUpon>
+    </Compile>
+    <Compile Include="P90_SYS\frm그룹메뉴관리.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P90_SYS\frm그룹메뉴관리.Designer.cs">
+      <DependentUpon>frm그룹메뉴관리.cs</DependentUpon>
+    </Compile>
+    <Compile Include="P90_SYS\frm그룹사용자관리.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="P90_SYS\frm그룹사용자관리.Designer.cs">
+      <DependentUpon>frm그룹사용자관리.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\pop_sf_상품제품검색.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\pop_sf_상품제품검색.designer.cs">
+      <DependentUpon>pop_sf_상품제품검색.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\pop_sf_상품제품입고목록.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\pop_sf_상품제품입고목록.designer.cs">
+      <DependentUpon>pop_sf_상품제품입고목록.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\pop_sf_장터지기제품.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\pop_sf_장터지기제품.designer.cs">
+      <DependentUpon>pop_sf_장터지기제품.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\pop_sf_제품검색.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\pop_sf_제품검색.Designer.cs">
+      <DependentUpon>pop_sf_제품검색.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\frmPrint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\frmPrint.Designer.cs">
+      <DependentUpon>frmPrint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\pop_공정추적LOT정하기.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\pop_공정추적LOT정하기.designer.cs">
+      <DependentUpon>pop_공정추적LOT정하기.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\pop거래처검색.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\pop거래처검색.Designer.cs">
+      <DependentUpon>pop거래처검색.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\pop거래처검색영업관리.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\pop거래처검색영업관리.designer.cs">
+      <DependentUpon>pop거래처검색영업관리.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\pop거래처잔고수정.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\pop거래처잔고수정.designer.cs">
+      <DependentUpon>pop거래처잔고수정.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\pop거래처잔고수정_detail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\pop거래처잔고수정_detail.designer.cs">
+      <DependentUpon>pop거래처잔고수정_detail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\pop공정검색.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\pop공정검색.Designer.cs">
+      <DependentUpon>pop공정검색.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\pop담당자검색.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\pop담당자검색.Designer.cs">
+      <DependentUpon>pop담당자검색.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\pop도축장검색.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\pop도축장검색.designer.cs">
+      <DependentUpon>pop도축장검색.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\pop설비검색.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\pop설비검색.Designer.cs">
+      <DependentUpon>pop설비검색.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\pop검사기준검색.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\pop검사기준검색.Designer.cs">
+      <DependentUpon>pop검사기준검색.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\pop스케줄메모.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\pop스케줄메모.designer.cs">
+      <DependentUpon>pop스케줄메모.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\pop씨지엠작업지시검색.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\pop씨지엠작업지시검색.designer.cs">
+      <DependentUpon>pop씨지엠작업지시검색.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\pop씨지엠주문서검색.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\pop씨지엠주문서검색.designer.cs">
+      <DependentUpon>pop씨지엠주문서검색.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\pop원부재료검색.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\pop원부재료검색.Designer.cs">
+      <DependentUpon>pop원부재료검색.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\pop유통기한등록.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\pop유통기한등록.Designer.cs">
+      <DependentUpon>pop유통기한등록.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\pop이력번호입력.cs" />
+    <Compile Include="Popup\pop작업지시검색.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\pop작업지시검색.Designer.cs">
+      <DependentUpon>pop작업지시검색.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\pop제품검색.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\pop제품검색.Designer.cs">
+      <DependentUpon>pop제품검색.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\pop우편검색.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\pop우편검색.Designer.cs">
+      <DependentUpon>pop우편검색.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popup\pop포장육검색.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popup\pop포장육검색.designer.cs">
+      <DependentUpon>pop포장육검색.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="S10_SALES\frm매출등록.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="S10_SALES\frm매출등록.designer.cs">
+      <DependentUpon>frm매출등록.cs</DependentUpon>
+    </Compile>
+    <Compile Include="S10_SALES\frm수금등록.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="S10_SALES\frm수금등록.designer.cs">
+      <DependentUpon>frm수금등록.cs</DependentUpon>
+    </Compile>
+    <Compile Include="S10_SALES\frm매출처원장.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="S10_SALES\frm매출처원장.designer.cs">
+      <DependentUpon>frm매출처원장.cs</DependentUpon>
+    </Compile>
+    <Compile Include="S20_INPUT\frm매입등록.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="S20_INPUT\frm매입등록.designer.cs">
+      <DependentUpon>frm매입등록.cs</DependentUpon>
+    </Compile>
+    <Compile Include="S20_INPUT\frm매입처원장.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="S20_INPUT\frm매입처원장.designer.cs">
+      <DependentUpon>frm매입처원장.cs</DependentUpon>
+    </Compile>
+    <Compile Include="S20_INPUT\frm지급등록.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="S20_INPUT\frm지급등록.designer.cs">
+      <DependentUpon>frm지급등록.cs</DependentUpon>
+    </Compile>
+    <Compile Include="S30_PAY\frm지출등록.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="S30_PAY\frm지출등록.designer.cs">
+      <DependentUpon>frm지출등록.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="frmBack.resx">
+      <DependentUpon>frmBack.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBackRoot.resx">
+      <DependentUpon>frmBackRoot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCheck.resx">
+      <DependentUpon>frmCheck.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P10_ORD\frm반품관리부확인.resx">
+      <DependentUpon>frm반품관리부확인.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P10_ORD\frm반품조회.resx">
+      <DependentUpon>frm반품조회.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P10_PLN\frm생산계획등록.resx">
+      <DependentUpon>frm생산계획등록.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P10_ORD\frm수금.resx">
+      <DependentUpon>frm수금.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P10_ORD\frm주문서.resx">
+      <DependentUpon>frm주문서.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P10_ORD\frm미송등록.resx">
+      <DependentUpon>frm미송등록.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P10_ORD\frm반품서.resx">
+      <DependentUpon>frm반품서.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P10_ORD\frm할인마감.resx">
+      <DependentUpon>frm할인마감.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P10_PLN\frm소요산출량.resx">
+      <DependentUpon>frm소요산출량.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P20_ORD\frm구매처원장.resx">
+      <DependentUpon>frm구매처원장.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P20_ORD\frm발주서등록.resx">
+      <DependentUpon>frm발주서등록.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P20_ORD\frm외주가공원장.resx">
+      <DependentUpon>frm외주가공원장.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P20_ORD\frm원자재반품등록.resx">
+      <DependentUpon>frm원자재반품등록.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P20_ORD\frm원자재원장현황.resx">
+      <DependentUpon>frm원자재원장현황.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P20_ORD\frm원자재입고등록.resx">
+      <DependentUpon>frm원자재입고등록.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P20_ORD\frm원자재입고식별표.resx">
+      <DependentUpon>frm원자재입고식별표.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P20_ORD\frm원자재재고현황.resx">
+      <DependentUpon>frm원자재재고현황.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P20_ORD\frm지육입고및공정.resx">
+      <DependentUpon>frm지육입고및공정.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P30_SCH\frm공정알람내역.resx">
+      <DependentUpon>frm공정알람내역.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P30_SCH\frm공정이동표바코드.resx">
+      <DependentUpon>frm공정이동표바코드.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P30_SCH\frm생산모니터링.resx">
+      <DependentUpon>frm생산모니터링.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P30_SCH\frm생산현황.resx">
+      <DependentUpon>frm생산현황.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P30_SCH\frm일일작업결과.resx">
+      <DependentUpon>frm일일작업결과.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P30_SCH\frm씨지엠작업지시서등록.resx">
+      <DependentUpon>frm씨지엠작업지시서등록.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P30_SCH\frm원자재투입바코드.resx">
+      <DependentUpon>frm원자재투입바코드.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P20_ORD\frm원자재투입현황.resx">
+      <DependentUpon>frm원자재투입현황.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P30_SCH\frm공정별생산현황.resx">
+      <DependentUpon>frm공정별생산현황.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P30_SCH\frm공정별재공현황.resx">
+      <DependentUpon>frm공정별재공현황.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P30_SCH\frm실적정보.resx">
+      <DependentUpon>frm실적정보.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P30_SCH\frm완제품자재입고확정.resx">
+      <DependentUpon>frm완제품자재입고확정.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P30_SCH\frm작업공정등록.resx">
+      <DependentUpon>frm작업공정등록.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P30_SCH\frm작업일보관리.resx">
+      <DependentUpon>frm작업일보관리.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P30_SCH\frm작업지시서_모니터링.resx">
+      <DependentUpon>frm작업지시서_모니터링.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P30_SCH\frm작업지시서등록.resx">
+      <DependentUpon>frm작업지시서등록.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P30_SCH\frm작업지시서현황.resx">
+      <DependentUpon>frm작업지시서현황.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P30_SCH\frm제품입고식별표.resx">
+      <DependentUpon>frm제품입고식별표.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P30_SCH\uc원장조회.resx">
+      <DependentUpon>uc원장조회.cs</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P40_ITM\frmLOTNO추적조회.resx">
+      <DependentUpon>frmLOTNO추적조회.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P40_ITM\frm거래처재고현황.resx">
+      <DependentUpon>frm거래처재고현황.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P40_ITM\frm씨지엠작업일보.resx">
+      <DependentUpon>frm씨지엠작업일보.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P40_ITM\frm씨지엠출고지시.resx">
+      <DependentUpon>frm씨지엠출고지시.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P40_ITM\frm씨지엠출고지시현황.resx">
+      <DependentUpon>frm씨지엠출고지시현황.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P40_ITM\frm제품원장현황.resx">
+      <DependentUpon>frm제품원장현황.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P40_ITM\frm제품입고확정.resx">
+      <DependentUpon>frm제품입고확정.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P40_ITM\frm제품재고현황.resx">
+      <DependentUpon>frm제품재고현황.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P40_ITM\frm제품출고등록.resx">
+      <DependentUpon>frm제품출고등록.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P40_ITM\frm제품출고원장.resx">
+      <DependentUpon>frm제품출고원장.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P40_ITM\frm제품출고이력현황.resx">
+      <DependentUpon>frm제품출고이력현황.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P40_ITM\frm제품출고현황.resx">
+      <DependentUpon>frm제품출고현황.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P40_ITM\frm제품출하바코드.resx">
+      <DependentUpon>frm제품출하바코드.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P40_ITM\frm제품현황.resx">
+      <DependentUpon>frm제품현황.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P50_QUA\frmHACCP등록.resx">
+      <DependentUpon>frmHACCP등록.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P50_QUA\frm검사성적서등록.resx">
+      <DependentUpon>frm검사성적서등록.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P50_QUA\frm공정검사기준등록.resx">
+      <DependentUpon>frm공정검사기준등록.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P50_QUA\frm공정검사통계표.resx">
+      <DependentUpon>frm공정검사통계표.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P50_QUA\frm생산보고서조회.resx">
+      <DependentUpon>frm생산보고서조회.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P50_QUA\frm씨지엠공정추적.resx">
+      <DependentUpon>frm씨지엠공정추적.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P50_QUA\frm씨지엠납품추적.resx">
+      <DependentUpon>frm씨지엠납품추적.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P50_QUA\frm원자재수입검사기준.resx">
+      <DependentUpon>frm원자재수입검사기준.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P50_QUA\frm제품검사성적서등록.resx">
+      <DependentUpon>frm제품검사성적서등록.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P50_QUA\frm제품불량내역.resx">
+      <DependentUpon>frm제품불량내역.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P50_QUA\frm품질추적현황.resx">
+      <DependentUpon>frm품질추적현황.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P60_FAC\frm금형설정등록.resx">
+      <DependentUpon>frm금형설정등록.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P50_QUA\frm원자재수입검사.resx">
+      <DependentUpon>frm원자재수입검사.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P60_FAC\frm금형수명관리대장.resx">
+      <DependentUpon>frm금형수명관리대장.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P60_FAC\frm금형카드등록.resx">
+      <DependentUpon>frm금형카드등록.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P60_FAC\frm설비이력관리대장.resx">
+      <DependentUpon>frm설비이력관리대장.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P60_FAC\frm설비점검등록.resx">
+      <DependentUpon>frm설비점검등록.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P60_FAC\frm설비카드등록.resx">
+      <DependentUpon>frm설비카드등록.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P70_MGM\frm수금결재처리.resx">
+      <DependentUpon>frm수금결재처리.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P70_MGM\frm영업소수금.resx">
+      <DependentUpon>frm영업소수금.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P70_MGM\frm영업소주문서.resx">
+      <DependentUpon>frm영업소주문서.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P70_MGM\frm판매결재처리.resx">
+      <DependentUpon>frm판매결재처리.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P70_MGM\frm판매수금현금목표등록.resx">
+      <DependentUpon>frm판매수금현금목표등록.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P70_STA\frmLOTNO별불랑분석.resx">
+      <DependentUpon>frmLOTNO별불랑분석.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P70_STA\frm공정품질달성률.resx">
+      <DependentUpon>frm공정품질달성률.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P70_STA\frm납기준수율분석.resx">
+      <DependentUpon>frm납기준수율분석.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P70_STA\frm매출목표달성률.resx">
+      <DependentUpon>frm매출목표달성률.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P70_STA\frm생산목표달성률.resx">
+      <DependentUpon>frm생산목표달성률.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P85_BAS\frmHACCP관련파일관리.resx">
+      <DependentUpon>frmHACCP관련파일관리.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P85_BAS\frmHACCP기준등록.resx">
+      <DependentUpon>frmHACCP기준등록.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P85_BAS\frm거래처등록.resx">
+      <DependentUpon>frm거래처등록.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P85_BAS\frm검사항목등록.resx">
+      <DependentUpon>frm검사항목등록.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P85_BAS\frm공정분류.resx">
+      <DependentUpon>frm공정분류.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P85_BAS\frm공정코드등록.resx">
+      <DependentUpon>frm공정코드등록.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P85_BAS\frm기초코드조회.resx">
+      <DependentUpon>frm기초코드조회.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P85_BAS\frm사업자관리.resx">
+      <DependentUpon>frm사업자관리.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P85_BAS\frm사용자관리.resx">
+      <DependentUpon>frm사용자관리.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P85_BAS\frm우편번호.resx">
+      <DependentUpon>frm우편번호.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P85_BAS\frm원산지등록.resx">
+      <DependentUpon>frm원산지등록.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P85_BAS\frm원자재기초수량등록.resx">
+      <DependentUpon>frm원자재기초수량등록.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P85_BAS\frm원자재등록.resx">
+      <DependentUpon>frm원자재등록.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P85_BAS\frm제품관리구분등록.resx">
+      <DependentUpon>frm제품관리구분등록.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P85_BAS\frm담당자등록.resx">
+      <DependentUpon>frm담당자등록.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P85_BAS\frm제품기초수량등록.resx">
+      <DependentUpon>frm제품기초수량등록.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P85_BAS\frm제품등록.resx">
+      <DependentUpon>frm제품등록.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P85_BAS\frm제품재고조정관리.resx">
+      <DependentUpon>frm제품재고조정관리.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P85_BAS\frm지육산출물등록.resx">
+      <DependentUpon>frm지육산출물등록.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P85_BAS\frm진료과목등록.resx">
+      <DependentUpon>frm진료과목등록.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P85_BAS\frm거래분류등록.resx">
+      <DependentUpon>frm거래분류등록.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P85_BAS\frm창고등록.resx">
+      <DependentUpon>frm창고등록.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P85_BAS\frm제품구분등록.resx">
+      <DependentUpon>frm제품구분등록.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P85_BAS\frm제형구분등록.resx">
+      <DependentUpon>frm제형구분등록.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P85_BAS\frm단위등록.resx">
+      <DependentUpon>frm단위등록.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P85_BAS\frm영업소등록.resx">
+      <DependentUpon>frm영업소등록.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P85_BAS\frm처방처약국등록.resx">
+      <DependentUpon>frm처방처약국등록.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P85_BAS\frm거래처제품할인률등록.resx">
+      <DependentUpon>frm거래처제품할인률등록.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P85_BAS\frm처방처등록.resx">
+      <DependentUpon>frm처방처등록.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P90_SYS\frm공지사항.resx">
+      <DependentUpon>frm공지사항.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P90_SYS\frm단가정리.resx">
+      <DependentUpon>frm단가정리.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P90_SYS\frm분류코드등록.resx">
+      <DependentUpon>frm분류코드등록.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P90_SYS\frm사업자등록.resx">
+      <DependentUpon>frm사업자등록.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P90_SYS\frm사용자관리.resx">
+      <DependentUpon>frm사용자관리.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P90_SYS\frm그룹메뉴관리.resx">
+      <DependentUpon>frm그룹메뉴관리.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="P90_SYS\frm그룹사용자관리.resx">
+      <DependentUpon>frm그룹사용자관리.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\frmPrint.resx">
+      <DependentUpon>frmPrint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\pop_sf_상품제품검색.resx">
+      <DependentUpon>pop_sf_상품제품검색.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\pop_sf_상품제품입고목록.resx">
+      <DependentUpon>pop_sf_상품제품입고목록.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\pop_sf_장터지기제품.resx">
+      <DependentUpon>pop_sf_장터지기제품.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\pop_sf_제품검색.resx">
+      <DependentUpon>pop_sf_제품검색.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\pop_공정추적LOT정하기.resx">
+      <DependentUpon>pop_공정추적LOT정하기.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\pop거래처검색.resx">
+      <DependentUpon>pop거래처검색.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\pop거래처검색영업관리.resx">
+      <DependentUpon>pop거래처검색영업관리.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\pop거래처잔고수정.resx">
+      <DependentUpon>pop거래처잔고수정.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\pop거래처잔고수정_detail.resx">
+      <DependentUpon>pop거래처잔고수정_detail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\pop공정검색.resx">
+      <DependentUpon>pop공정검색.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\pop담당자검색.resx">
+      <DependentUpon>pop담당자검색.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\pop도축장검색.resx">
+      <DependentUpon>pop도축장검색.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\pop설비검색.resx">
+      <DependentUpon>pop설비검색.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\pop검사기준검색.resx">
+      <DependentUpon>pop검사기준검색.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\pop스케줄메모.resx">
+      <DependentUpon>pop스케줄메모.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\pop씨지엠작업지시검색.resx">
+      <DependentUpon>pop씨지엠작업지시검색.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\pop씨지엠주문서검색.resx">
+      <DependentUpon>pop씨지엠주문서검색.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\pop원부재료검색.resx">
+      <DependentUpon>pop원부재료검색.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\pop유통기한등록.resx">
+      <DependentUpon>pop유통기한등록.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\pop작업지시검색.resx">
+      <DependentUpon>pop작업지시검색.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\pop제품검색.resx">
+      <DependentUpon>pop제품검색.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\pop우편검색.resx">
+      <DependentUpon>pop우편검색.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popup\pop포장육검색.resx">
+      <DependentUpon>pop포장육검색.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Reports\rptHACCP점검표.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rpt거래명세표.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rpt매출처원장.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rpt발주서현황.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rpt원자재원장현황.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rpt원자재투입현황.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rpt공정이동전표.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rpt원료청구.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rpt원자재재고현황.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rpt원장조회.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rpt원장현황.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rpt자재식별표.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rpt제품박스바코드.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rpt제품생산일지.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rpt제품식별표.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rpt제품식별표2.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="S10_SALES\frm매출등록.resx">
+      <DependentUpon>frm매출등록.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="S10_SALES\frm수금등록.resx">
+      <DependentUpon>frm수금등록.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="S10_SALES\frm매출처원장.resx">
+      <DependentUpon>frm매출처원장.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="S20_INPUT\frm매입등록.resx">
+      <DependentUpon>frm매입등록.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="S20_INPUT\frm매입처원장.resx">
+      <DependentUpon>frm매입처원장.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="S20_INPUT\frm지급등록.resx">
+      <DependentUpon>frm지급등록.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="S30_PAY\frm지출등록.resx">
+      <DependentUpon>frm지출등록.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="dsRepot01.xsc">
+      <DependentUpon>dsRepot01.xsd</DependentUpon>
+    </None>
+    <None Include="dsRepot01.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsRepot01.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="dsRepot01.xss">
+      <DependentUpon>dsRepot01.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\smartMain.P1매출관리.ds기간별매출현황.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>6</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="main_logo_32.ico" />
+    <None Include="Resources\work.png" />
+    <None Include="Resources\setting.png" />
+    <None Include="Resources\set.png" />
+    <None Include="Resources\remote.png" />
+    <None Include="Resources\plan.png" />
+    <None Include="Resources\much.png" />
+    <None Include="Resources\card.png" />
+    <None Include="Resources\czmlogo2.png" />
+    <None Include="Resources\휴_원자재.png" />
+    <None Include="Resources\휴_생.png" />
+    <None Include="Resources\휴_납.png" />
+    <None Include="Resources\휴_공.png" />
+    <None Include="Resources\납기준수.png" />
+    <None Include="Resources\공정품질.png" />
+    <None Include="Resources\매출목표.png" />
+    <None Include="Resources\생산목표.png" />
+    <None Include="Resources\그림1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5%28x86 및 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="S40_BILL\" />
+    <Folder Include="S50_INPUT\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
